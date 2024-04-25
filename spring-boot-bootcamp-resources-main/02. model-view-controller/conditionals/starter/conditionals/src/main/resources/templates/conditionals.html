@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Conditionals</title>
+    </head>
+    <body>
+        <h1 th:text="${sales > 50} ? 'Sales were good' : 'sales were bad!!'"></h1>
+        <div th:switch="${product}">
+
+            <p th:case="chair">50</p>
+            <p th:case="tv">70</p>
+            <p th:case="phone">150</p>
+            <p th:case="*">No match</p>
+
+        </div>
+    </body>
+</html>
